@@ -28,7 +28,7 @@ public class TimeZone : MonoBehaviour
         sun_rotate = sun.transform.rotation.x;
        // Debug.Log("sunrotate:" + sun_rotate);
         //太陽の角度が0以上ならば昼　そうでなければ夜
-        if(sun_rotate  < 0)
+        if(sun_rotate  > 0)
         {
             _time_zone = time_zone.Night;
         }

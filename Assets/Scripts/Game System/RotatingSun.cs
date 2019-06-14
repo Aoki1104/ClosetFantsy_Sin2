@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class RotatingSun : MonoBehaviour
 {
-    public TimeManagement time_management;
-    
     //1秒間の回転角度
     private float rotate_speed = 2f;
     //0時の角度
@@ -15,6 +13,6 @@ public class RotatingSun : MonoBehaviour
     void Update()
     {
         //太陽が正の方向に(時計回り)に回転する
-        this.transform.Rotate(Vector3.right * rotate_speed * time_management.TimeReturn() * Time.deltaTime);   
+        this.transform.Rotate(Vector3.right * rotate_speed * Time.deltaTime);   
     }
 }

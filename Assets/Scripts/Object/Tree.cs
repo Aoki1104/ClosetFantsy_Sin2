@@ -9,7 +9,6 @@ public class Tree : MonoBehaviour
     private Vector3 maxsize = new Vector3(5, 5, 5);
 
     public WeatherBase weather_base;
-    public TimeManagement time_management;
     public TimeZone time_zone;
 
 
@@ -19,7 +18,7 @@ public class Tree : MonoBehaviour
         //木の大きさが最大サイズ以下だったら成長し続ける
         if (tree_size.x <= maxsize.x && tree_size.y <= maxsize.y && tree_size.z <= maxsize.z)
         {
-            tree_size += growspeed * Time.deltaTime * time_management.TimeReturn() ;
+            tree_size += growspeed * Time.deltaTime;
             transform.localScale = tree_size;
         }
     }
