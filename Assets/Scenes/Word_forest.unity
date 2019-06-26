@@ -1532,6 +1532,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 95380085654935804, guid: 6bbfea6690ef7724ba495c866081f855,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 95380085654935804, guid: 6bbfea6690ef7724ba495c866081f855,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: db1e857277a7a3b4eb29fdbe98213ee1, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6bbfea6690ef7724ba495c866081f855, type: 3}
 --- !u!1 &693559233 stripped
@@ -1564,6 +1574,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57ef9c1158491c041bd9089825b16647, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  main_camera: {fileID: 0}
   walk_speed: 1.5
 --- !u!54 &693559236
 Rigidbody:
@@ -2624,6 +2635,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SJ001
       objectReference: {fileID: 0}
+    - target: {fileID: 100102, guid: ff3dd417bb566b849b752ce57810bbf5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400102, guid: ff3dd417bb566b849b752ce57810bbf5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 400.67
@@ -2680,7 +2695,20 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 3
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 11100000, guid: ff3dd417bb566b849b752ce57810bbf5, type: 3}
+      propertyPath: m_Animations.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11100000, guid: ff3dd417bb566b849b752ce57810bbf5, type: 3}
+      propertyPath: m_CullingType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11100000, guid: ff3dd417bb566b849b752ce57810bbf5, type: 3}
+      propertyPath: m_Animation
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 11100000, guid: ff3dd417bb566b849b752ce57810bbf5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ff3dd417bb566b849b752ce57810bbf5, type: 3}
 --- !u!1 &1272537728 stripped
 GameObject:
@@ -2700,6 +2728,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56120a775fcf8094a81f94dbdca166ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  main_camera: {fileID: 0}
   walk_speed: 1.5
 --- !u!114 &1272537730
 MonoBehaviour:

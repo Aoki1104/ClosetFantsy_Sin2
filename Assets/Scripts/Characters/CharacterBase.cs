@@ -15,20 +15,25 @@ public class CharacterBase : MonoBehaviour
 
     BasicState basic_state =BasicState.Idle;
 
-    private Vector3 destination_point;    //目的地
-    private Vector3 diff;
-    private Rigidbody rigid;
-    private iWalk iwalk;
-    private float wait_time;      //Idleの時間
-    private float max_wait_time = 2.5f;
-    private float idle_time;
-    [SerializeField] private float walk_speed;
+    public Camera main_camera;
 
-    // Start is called before the first frame update
+    [SerializeField] private float walk_speed;
+    private Vector3 destination_point;    //目的地
+    private Vector3 previous_position;    //前回の目的地データ
+    private Vector3 diff;                //現在地と目的地の差
+    private Rigidbody rigid;    
+    private iWalk iwalk;
+    private float wait_time;             //Idleの時間
+    private float max_wait_time = 2.5f;  //Idle状態の最大時間
+    private float idle_time;
+    private Animator chracter_animator;
+    
     void Start()
     {
         iwalk = this.gameObject.GetComponent<iWalk>();
         rigid = this.gameObject.GetComponent<Rigidbody>();
+        chracter_animator = GetComponent<Animator>();
+        chracter_animator.SetInteger("State",(int)basic_state);
     }
 
     // Update is called once per frame
@@ -82,6 +87,7 @@ public class CharacterBase : MonoBehaviour
     void SetState(BasicState _state)
     {
         basic_state = _state;
+        chracter_animator.SetInteger("State", (int)basic_state);
 
         switch (basic_state)
         {
@@ -98,8 +104,6 @@ public class CharacterBase : MonoBehaviour
                 iwalk.GetCharaPosition(this.transform.position);
                 destination_point = iwalk.SetDestination();
                 diff = destination_point - this.transform.position ;
-                Debug.Log("destination:" + destination_point);
-               // this.transform.LookAt(destination_point);
                 break;
 
             default:
