@@ -15,7 +15,7 @@ public class CharacterBase : MonoBehaviour
 
     BasicState basic_state =BasicState.Idle;
 
-    public Camera main_camera;
+ //   public Camera main_camera;
 
     [SerializeField] private float walk_speed;
     private Vector3 destination_point;    //目的地
@@ -96,6 +96,7 @@ public class CharacterBase : MonoBehaviour
 
                 idle_time = 0.0f;
                 wait_time = Random.Range(0.0f, max_wait_time);
+                transform.LookAt(new Vector3(0,this.transform.position.y,this.transform.position.z));
                 rigid.velocity = Vector3.zero;
                 break;
 
