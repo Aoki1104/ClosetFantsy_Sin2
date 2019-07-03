@@ -18,8 +18,8 @@ public class Flying : MonoBehaviour,iWalk
     private void Start()
     {
         ground_position = GameObject.FindGameObjectWithTag("Ground").transform.position;
-        max_y = ground_position.y + max_position;
-        min_y = ground_position.y + 1;
+        max_y = ground_position.y +this.transform.position.y+ max_position;
+        min_y = ground_position.y + Mathf.Abs(this.transform.position.y);
     }
 
     public void GetCharaPosition(Vector3 chara_position)
@@ -31,7 +31,7 @@ public class Flying : MonoBehaviour,iWalk
     {
         character_position.x += Random.Range(min_position, max_position);
         character_position.z += Random.Range(min_position, max_position);
-        character_position.y += Random.Range(min_y, max_y);
+        character_position.y = Random.Range(min_y, max_y);
 
         return character_position;
     }

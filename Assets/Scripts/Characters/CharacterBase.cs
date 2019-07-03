@@ -39,11 +39,11 @@ public class CharacterBase : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        StateControll();
+        UpdateState();
     }
 
     //ステート(状態)を管理する関数
-    void StateControll()
+    void UpdateState()
     {
 
 
@@ -56,7 +56,7 @@ public class CharacterBase : MonoBehaviour
                 if (idle_time > wait_time)
                 {
                     idle_time = 0.0f;
-                    SetState(BasicState.Walk);
+                    EndState(BasicState.Idle);
                 }
 
                 break;
@@ -74,17 +74,17 @@ public class CharacterBase : MonoBehaviour
                 transform.Translate(Vector3.forward * walk_speed * Time.deltaTime);
 
                 if ((this.transform.position - destination_point).sqrMagnitude < 1)
-                    SetState(BasicState.Idle);
+                    EndState(BasicState.Walk);
                 break;
 
             default:
-                SetState(BasicState.Idle);
+                EndState(BasicState.Idle);
                 break;
          }
     }
 
     //ステート(状態)の初期処理
-    void SetState(BasicState _state)
+    void StartState(BasicState _state)
     {
         basic_state = _state;
         chracter_animator.SetInteger("State", (int)basic_state);
@@ -96,8 +96,7 @@ public class CharacterBase : MonoBehaviour
 
                 idle_time = 0.0f;
                 wait_time = Random.Range(0.0f, max_wait_time);
-                transform.LookAt(new Vector3(0,this.transform.position.y,this.transform.position.z));
-                rigid.velocity = Vector3.zero;
+
                 break;
 
             //歩く
@@ -108,7 +107,29 @@ public class CharacterBase : MonoBehaviour
                 break;
 
             default:
-                SetState(BasicState.Idle);
+                StartState(BasicState.Idle);
+                break;
+        }
+    }
+
+    //ステートの終わり
+    void EndState(BasicState _state)
+    {
+        switch (_state)
+        {
+            case BasicState.Idle:
+                StartState(BasicState.Walk);
+                break;
+
+            case BasicState.Walk:
+                transform.LookAt(new Vector3(destination_point.x, this.transform.position.y, destination_point.z));
+                rigid.velocity = Vector3.zero;
+                StartState(BasicState.Idle);
+      
+                break;
+
+            default:
+
                 break;
         }
     }
