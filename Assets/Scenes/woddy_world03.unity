@@ -51,7 +51,7 @@ LightmapSettings:
     m_IndirectOutputScale: 1
     m_AlbedoBoost: 1
     m_EnvironmentLightingMode: 1
-    m_EnableBakedLightmaps: 0
+    m_EnableBakedLightmaps: 1
     m_EnableRealtimeLightmaps: 0
   m_LightmapEditorSettings:
     serializedVersion: 12
@@ -1184,13 +1184,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 95618120}
-  m_LocalRotation: {x: 0.18896516, y: -0.2850788, z: -0.5191776, w: 0.7832477}
+  m_LocalRotation: {x: -0.7076513, y: -0.57527083, z: -0.40973806, w: 0.020193147}
   m_LocalPosition: {x: 171.6, y: 3.1, z: -4.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: -40, z: -67.077}
+  m_LocalEulerAnglesHint: {x: -150, y: -40, z: -67.077}
 --- !u!114 &95618123
 MonoBehaviour:
   m_ObjectHideFlags: 0
