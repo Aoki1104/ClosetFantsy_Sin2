@@ -25,18 +25,18 @@ public class TimeZone : MonoBehaviour
 
     void Update()
     {
-        sun_rotate = sun.transform.rotation.x;
+        sun_rotate = sun.transform.eulerAngles.x;
        // Debug.Log("sunrotate:" + sun_rotate);
-        //太陽の角度が0以上ならば昼　そうでなければ夜
-        if(sun_rotate  > 0)
-        {
-            _time_zone = time_zone.Night;
-        }
-        else
+        //太陽の角度が0より上ならば昼　そうでなければ夜
+        if(sun_rotate  >= 0 && sun_rotate <= 80)
         {
             _time_zone = time_zone.Daytime;
         }
-
+        else if(sun_rotate >=270 )
+        {
+            _time_zone = time_zone.Night;
+        }
+        Debug.Log("sun:" + sun_rotate);
         timezone.text = _time_zone.ToString();
     }
 

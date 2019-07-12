@@ -12,18 +12,6 @@ public class TimeControll : MonoBehaviour
     private float accel_speed = 2.0f;
     private float normal_speed = 1.0f;
 
-
-    #region デバッグ用変数
-    public Text debugtimetext;      
-    private float debug_filed_time; //通常の時間の進みを持つ変数
-    #endregion
-
-
-    private void Update()
-    {
-        DebugTimeAdd(); 
-    }
-
     /// <summary>
     /// 時間を加速させる
     /// </summary>
@@ -42,10 +30,4 @@ public class TimeControll : MonoBehaviour
         Time.timeScale = time_speed;
     }
 
-    //時間の移動変化を確認するためのデバック用関数
-    private void DebugTimeAdd()
-    {
-        debug_filed_time += Time.deltaTime;
-        debugtimetext.text = debug_filed_time.ToString();
-    }
 }

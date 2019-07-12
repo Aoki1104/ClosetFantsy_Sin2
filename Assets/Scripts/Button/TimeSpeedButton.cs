@@ -8,6 +8,7 @@ using UnityEngine.UI;
 /// </summary>
 public class TimeSpeedButton : MonoBehaviour
 {
+    TimeControll time_controll;
     /// <summary>
     /// 時間を加速させる
     /// </summary>
