@@ -21,7 +21,7 @@ public class TimeZone : MonoBehaviour
 
 
     //デバッグ用変数
-    public Text timezone;
+   // public Text timezone;
 
     void Update()
     {
@@ -36,8 +36,8 @@ public class TimeZone : MonoBehaviour
         {
             _time_zone = time_zone.Night;
         }
-        Debug.Log("sun:" + sun_rotate);
-        timezone.text = _time_zone.ToString();
+       // Debug.Log("sun:" + sun_rotate);
+      //  timezone.text = _time_zone.ToString();
     }
 
     /// <summary>
