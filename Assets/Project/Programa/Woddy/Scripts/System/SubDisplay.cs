@@ -18,14 +18,15 @@ public class SubDisplay : MonoBehaviour
         float scale = deviceAspect / developAspect;
 
         GameObject cam = this.gameObject;
-        Camera mainCamera = cam.GetComponent<Camera>();
+        Camera subCamera = cam.GetComponent<Camera>();
 
         // カメラに設定していたorthographicSizeを実機との対比でスケール
-        float deviceSize = mainCamera.orthographicSize;
+        float deviceSize = subCamera.orthographicSize;
         // scaleの逆数
         float deviceScale = 1.0f / scale;
         // orthographicSizeを計算し直す
-        mainCamera.orthographicSize = deviceSize * deviceScale;
+        subCamera.orthographicSize = deviceSize * deviceScale;
 
+        Screen.SetResolution(1024, 768, false, 60);
     }
 }
