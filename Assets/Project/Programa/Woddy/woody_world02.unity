@@ -4583,7 +4583,7 @@ RectTransform:
   m_GameObject: {fileID: 448171254}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 10, z: 1}
   m_Children:
   - {fileID: 1724961648}
   m_Father: {fileID: 420284321}
@@ -4591,7 +4591,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 209, y: -200}
+  m_AnchoredPosition: {x: 718, y: -335}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &448171256
@@ -28169,7 +28169,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1724961648
 RectTransform:
   m_ObjectHideFlags: 0
@@ -28222,7 +28222,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: "\u3068\u304D\u306F\u52A0\u901F\u3059\u308B"
 --- !u!222 &1724961650
 CanvasRenderer:
   m_ObjectHideFlags: 0
