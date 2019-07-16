@@ -3,8 +3,9 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -17,6 +18,10 @@ MonoBehaviour:
   SunIntensity: 0.6
   CloudShadowIntensity: 0.5
   MoonIntensity: 0.5
+  UseAuroras: 1
+  AuroraIntensity: 0.4
+  AuroraOuterColor: {r: 0, g: 1, b: 1, a: 1}
+  AuroraInnerColor: {r: 0, g: 1, b: 0, a: 1}
   MinimumFogLevel: 300
   MaximumFogLevel: 600
   FogDensity: 0.0025
@@ -24,11 +29,11 @@ MonoBehaviour:
   WindBendingLevel: 0.2
   WindIntensity: 1
   WeatherEffect: {fileID: 198882807848139052, guid: 516fd25c12e04ba46bce3ce4bab8f8e1,
-    type: 2}
+    type: 3}
   ParticleEffectAmount: 2000
   ParticleEffectVector: {x: 0, y: 28, z: 20}
   AdditionalWeatherEffect: {fileID: 198814685187613174, guid: 041ba628b590a1c47a1643f108529d32,
-    type: 2}
+    type: 3}
   AdditionalParticleEffectAmount: 50
   AdditionalParticleEffectVector: {x: 0, y: 0, z: 0}
   WeatherVolume: 1
@@ -38,11 +43,12 @@ MonoBehaviour:
   UseWeatherEffect: 0
   UseAdditionalWeatherEffect: 0
   SpecialWeatherType: 1
-  Season: 2
+  Season: 0
   CloudHeight: 650
   CloudLevel: 4
   TemperatureType: 1
   ShaderControl: 0
   UseLightning: 0
   CustomizeWeatherIcon: 0
+  WaitForCloudLevel: 1
   WeatherIcon: {fileID: 2800000, guid: d5cd2010397d1b3478354f72bd2fffbe, type: 3}
