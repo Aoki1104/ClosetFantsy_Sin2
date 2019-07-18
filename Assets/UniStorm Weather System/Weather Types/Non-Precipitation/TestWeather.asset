@@ -10,41 +10,40 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e4ec900128fbff24683f8f2aac8c2192, type: 3}
-  m_Name: Blowing Leaves
+  m_Name: TestWeather
   m_EditorClassIdentifier: 
-  WeatherTypeName: Blowing Leaves
-  CloudProfileComponent: {fileID: 11400000, guid: 8e28dbd69d1b7a542967afade2936c90,
+  WeatherTypeName: New Weather Type
+  CloudProfileComponent: {fileID: 11400000, guid: b15b32a2248ba9e4cb4ada34e93d4561,
     type: 2}
   SunIntensity: 1
-  CloudShadowIntensity: 0.9
-  MoonIntensity: 1.5
+  CloudShadowIntensity: 1
+  MoonIntensity: 1
   UseAuroras: 1
   AuroraIntensity: 0.4
   AuroraOuterColor: {r: 0, g: 1, b: 1, a: 1}
   AuroraInnerColor: {r: 0, g: 1, b: 0, a: 1}
   MinimumFogLevel: 300
   MaximumFogLevel: 600
-  FogDensity: 0.0161
+  FogDensity: 0.0006
   WindSpeedLevel: 0.85
   WindBendingLevel: 0.2
-  WindIntensity: 1
-  WeatherEffect: {fileID: 198172571897266472, guid: 006d4fcb915e4ed4283a967eb882cf88,
-    type: 3}
-  ParticleEffectAmount: 5
-  ParticleEffectVector: {x: 0, y: 6, z: 8}
+  WindIntensity: 0.25
+  WeatherEffect: {fileID: 0}
+  ParticleEffectAmount: 200
+  ParticleEffectVector: {x: 0, y: 28, z: 0}
   AdditionalWeatherEffect: {fileID: 0}
   AdditionalParticleEffectAmount: 200
   AdditionalParticleEffectVector: {x: 0, y: 28, z: 0}
-  WeatherVolume: 0.15
-  WeatherSound: {fileID: 8300000, guid: 7b61d7e0abee2f84db505d2380db4ea2, type: 3}
+  WeatherVolume: 1
+  WeatherSound: {fileID: 0}
   PrecipitationWeatherType: 1
-  UseWeatherSound: 0
-  UseWeatherEffect: 0
+  UseWeatherSound: 1
+  UseWeatherEffect: 1
   UseAdditionalWeatherEffect: 1
   SpecialWeatherType: 1
   Season: 0
   CloudHeight: 1000
-  CloudLevel: 5
+  CloudLevel: 2
   TemperatureType: 2
   ShaderControl: 2
   UseLightning: 1
