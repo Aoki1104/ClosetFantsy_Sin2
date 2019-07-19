@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 public class ButtonFunction : MonoBehaviour
 {
 
-    public void StringArgFunction(string s)
+    public void StringArgFunction(string world)
     {
-        SceneManager.LoadScene(s);
+        SceneManager.LoadScene(world);
     }
 }

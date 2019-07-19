@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Project/Programa/Woddy/woody_world02.unity
     guid: 825b9e2d07d81d749b3c3c6a8e32e63d
+  - enabled: 1
+    path: Assets/Project/Programa/Halloween/world_Hallo.unity
+    guid: fd7fbb88b3f69114c9f27fdbd5408cf0
   m_configObjects: {}
