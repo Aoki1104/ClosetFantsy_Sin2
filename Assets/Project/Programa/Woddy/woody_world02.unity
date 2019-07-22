@@ -17204,13 +17204,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1125402705}
-  m_LocalRotation: {x: -0.145227, y: -0.5921349, z: -0.06535281, w: 0.78994584}
-  m_LocalPosition: {x: 142.5, y: 48.4, z: -59.4}
+  m_LocalRotation: {x: -0.14138418, y: -0.5474711, z: -0.073296554, w: 0.8215313}
+  m_LocalPosition: {x: 119.6, y: 51.5, z: -81}
   m_LocalScale: {x: 0.83597, y: 0.83597, z: 0.83597}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: -17.869001, y: 285.639, z: 4.142}
+  m_LocalEulerAnglesHint: {x: -18.213001, y: 292.30798, z: 2.0740001}
 --- !u!114 &1125402711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19631,7 +19631,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!199 &1256917897
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -25017,7 +25017,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1333394498
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25076,7 +25076,7 @@ MonoBehaviour:
   UniStormMenuKey: 27
   UniStormCanvas: {fileID: 0}
   m_MenuToggle: 0
-  TabNumber: 2
+  TabNumber: 1
   TimeTabNumbers: 0
   WeatherTabNumbers: 1
   CelestialTabNumbers: 0
@@ -25112,7 +25112,7 @@ MonoBehaviour:
   Minute: 0
   Hour: 12
   Day: 21
-  Month: 6
+  Month: 12
   Year: 2018
   DayLength: 356
   NightLength: 356
@@ -25993,7 +25993,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  CurrentSeason: 2
+  CurrentSeason: 4
   CloudType: 1
   CloudQuality: 2
   TemperatureType: 0
