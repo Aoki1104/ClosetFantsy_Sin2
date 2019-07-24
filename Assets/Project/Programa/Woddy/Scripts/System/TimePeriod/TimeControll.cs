@@ -11,11 +11,23 @@ public class TimeControll : MonoBehaviour
     private float time_speed = 1.0f;    //時間の進む速度を保有する変数
     private float accel_speed = 2.0f;
     private float normal_speed = 1.0f;
+    private bool time_accle = false;
+
+    public void TimeSpeedChange()
+    {
+        time_accle = !time_accle;
+
+        if (time_accle)
+            TimeSpeedAccel();
+        else
+            TimeSpeedNormal();
+    }
+
 
     /// <summary>
     /// 時間を加速させる
     /// </summary>
-    public void TimeSpeedAccel()
+    private void TimeSpeedAccel()
     {
         time_speed = accel_speed;
         Time.timeScale = time_speed;
@@ -24,7 +36,7 @@ public class TimeControll : MonoBehaviour
     /// <summary>
     /// 通常の時間速度に設定する
     /// </summary>
-    public void TimeSpeedNormal()
+    private void TimeSpeedNormal()
     {
         time_speed = normal_speed;
         Time.timeScale = time_speed;
