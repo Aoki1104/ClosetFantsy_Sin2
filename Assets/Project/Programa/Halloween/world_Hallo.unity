@@ -1918,7 +1918,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 539607166}
-        m_MethodName: 
+        m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1976,11 +1976,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 539607161}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08f82d2d9b2abfd45bd97183af43da5b, type: 3}
+  m_Script: {fileID: 11500000, guid: ca43d51eb98c3544fb43df46384caa34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpPower: 300
-  waittime: 500
+  light1: {fileID: 1685929993}
 --- !u!1 &539809124 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 173078, guid: 9128fac7ecb9c4b4085275bbf85879ee,
