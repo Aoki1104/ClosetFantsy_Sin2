@@ -817,9 +817,9 @@ namespace UniStorm
         //Initialize our starting weather so it fades in instantly on start
         public void InitializeWeather(bool UseWeatherConditions)
         {
-            //If our starting weather type's conditions are not met, keep rerolling weather until an appropriate one is found.
+            //If our 0's conditions are not met, keep rerolling weather until an appropriate one is found.
             TempWeatherType = CurrentWeatherType;
-
+            Debug.Log("Weather:"+ CurrentWeatherType);
             if (UseWeatherConditions)
             {
                 while (TempWeatherType.TemperatureType == WeatherType.TemperatureTypeEnum.AboveFreezing && Temperature <= m_FreezingTemperature
