@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PanelButton_pumpkin : MonoBehaviour
+public class Pumpkin_Manager : MonoBehaviour
 {
     public bool pumpkin_move = false;//カボチャが動いてるかどうか判別
 
-    public void OnClick()
+    public void PumpkinChangeState()
     {
         pumpkin_move = !pumpkin_move;
     }
-
+  
 }
