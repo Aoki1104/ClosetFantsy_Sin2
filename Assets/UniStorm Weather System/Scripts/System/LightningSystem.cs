@@ -15,9 +15,9 @@ namespace UniStorm.Utility
         [HideInInspector]
         public bool AnimateLight;
         [HideInInspector]
-        public float LightningLightIntensityMin = 1;
+        public float LightningLightIntensityMin = 2;
         [HideInInspector]
-        public float LightningLightIntensityMax = 1;
+        public float LightningLightIntensityMax = 3;
         [HideInInspector]
         public float LightningLightIntensity;
         [HideInInspector]
