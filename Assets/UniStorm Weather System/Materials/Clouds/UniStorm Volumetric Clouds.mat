@@ -56,7 +56,7 @@ Material:
     - _SnowStrength: 0
     - _WetnessStrength: 0
     - _WorldPosGlobal: 0
-    - _uAttenuation: -0.016068168
+    - _uAttenuation: 2.0000207
     - _uCloudAlpha: 1
     - _uCloudsBackwardScatteringG: -0.2
     - _uCloudsBaseEdgeSoftness: 0.025
@@ -75,12 +75,12 @@ Material:
     - _uCloudsLayerShadowMergeStepSize: 4
     - _uCloudsLayerTop: -70
     - _uCloudsMinTransmittance: 32.58
-    - _uCloudsMovementSpeed: 10
+    - _uCloudsMovementSpeed: 5
     - _uCloudsScatteringLerp: 0.5
     - _uCloudsShadowMergeStepMultiply: 1.3
     - _uCloudsShadowMergeStepSize: 10
     - _uCloudsTop: 2150
-    - _uCloudsTurbulenceSpeed: 10
+    - _uCloudsTurbulenceSpeed: 5
     - _uConverganceRate: 0.35
     - _uCurlScale: 1500
     - _uCurlStrength: 0.15
@@ -101,14 +101,14 @@ Material:
     - _SunColor: {r: 1, g: 0.9943289, b: 0.9009434, a: 1}
     - _SunDir: {r: 0.2784009, g: 0.9581905, b: 0.0660601, a: 0}
     - _uCloudColor: {r: 1, g: 1, b: 1, a: 1}
-    - _uCloudsAmbientColorBottom: {r: 0.16820061, g: 0.19904326, b: 0.22729012, a: 1}
-    - _uCloudsAmbientColorTop: {r: 0.3797322, g: 0.31253445, b: 0.2945051, a: 1}
+    - _uCloudsAmbientColorBottom: {r: 0.42842102, g: 0.4219529, b: 0.4198187, a: 1}
+    - _uCloudsAmbientColorTop: {r: 0.9267642, g: 0.47077233, b: 0.23836866, a: 1}
     - _uCloudsColor: {r: 1, g: 1, b: 1, a: 1}
     - _uCloudsHorizonColor: {r: 0, g: 0, b: 0, a: 1}
-    - _uFogColor: {r: 0.15519723, g: 0.18760972, b: 0.20820722, a: 0.00075}
+    - _uFogColor: {r: 0.34305936, g: 0.33045137, b: 0.30489194, a: 0.00075}
     - _uHorizonColor: {r: 1, g: 1, b: 1, a: 1}
     - _uLightningColor: {r: 0.63256925, g: 0.65693235, b: 0.66176474, a: 1}
     - _uMoonColor: {r: 0.66442686, g: 0.7165921, b: 0.745283, a: 1}
-    - _uMoonDir: {r: 0.50037754, g: -0.084139496, b: -0.86170924, a: 0}
-    - _uSunColor: {r: 0.5711697, g: 0.2439775, b: 0.07388295, a: 1}
-    - _uSunDir: {r: -0.17409347, g: 0.09921559, b: 0.9797182, a: 0}
+    - _uMoonDir: {r: 0.6685169, g: 0.09068651, b: 0.7381471, a: 0}
+    - _uSunColor: {r: 0.76968014, g: 0.49866486, b: 0.36315718, a: 1}
+    - _uSunDir: {r: -0.7307799, g: -0.084807165, b: -0.6773246, a: 0}

@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Project/Programa/COMSet/Initialize.unity
+    guid: 53e0d29c45774d14c86a248e3c879922
+  - enabled: 1
     path: Assets/Project/Programa/Woddy/woody_world02.unity
     guid: 825b9e2d07d81d749b3c3c6a8e32e63d
   - enabled: 1

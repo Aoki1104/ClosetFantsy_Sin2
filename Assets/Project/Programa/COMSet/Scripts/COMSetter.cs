@@ -10,7 +10,7 @@ public class COMSetter : MonoBehaviour {
 
     UnityEngine.UI.Text _text;
     public UnityEngine.UI.Text _sub_text;
-    int _comNumber;
+    int _comNumber = 1;
 	private void Start () {
         _text = GetComponent<UnityEngine.UI.Text>();
         if (GrobalData.LEDComNumber != -1)
@@ -25,7 +25,15 @@ public class COMSetter : MonoBehaviour {
     }
 	
 	private void Update () {
-        _comNumber = Mathf.Clamp(_comNumber, 0, 50);
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+            ComNumberPlus();
+        else if (Input.GetKeyDown(KeyCode.LeftArrow))
+            ComNumberMinus();
+
+        if (_comNumber > 20)
+            _comNumber = 1;
+        if (_comNumber < 1)
+            _comNumber = 20;
         _text.text = "COM" + _comNumber;
         _sub_text.text = "COM" + _comNumber;
         GrobalData.LEDComNumber = _comNumber;
@@ -39,5 +47,10 @@ public class COMSetter : MonoBehaviour {
     public void ComNumberMinus()
     {
         _comNumber--;
+    }
+
+    public void SetCOM()
+    {
+        PlayerPrefs.SetInt("COM", _comNumber);
     }
 }
