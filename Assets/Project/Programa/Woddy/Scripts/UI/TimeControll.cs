@@ -5,13 +5,14 @@ using UnityEngine;
 public class TimeControll : MonoBehaviour
 {
     private int normal_speed = 1;
-    private int accle_speed = 2;
+    private int accle_speed = 4;
     private bool time_accle = false;
+    [SerializeField] private GameObject accel_particle;
 
     public void TimeChange()
     {
         time_accle = !time_accle;
-
+        
         if (time_accle)
             TimeAccel();
         else
@@ -24,6 +25,7 @@ public class TimeControll : MonoBehaviour
     private void TimeNormal()
     {
         Time.timeScale = normal_speed;
+        accel_particle.SetActive(false);
     }
 
     /// <summary>
@@ -32,6 +34,7 @@ public class TimeControll : MonoBehaviour
     private void TimeAccel()
     {
         Time.timeScale = accle_speed;
+        accel_particle.SetActive(true);
     }
     
 }
