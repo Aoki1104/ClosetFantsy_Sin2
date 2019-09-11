@@ -19,6 +19,13 @@ public class TimeControll : MonoBehaviour
             TimeNormal();
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.F))
+            TimeChange();
+
+    }
+
     /// <summary>
     /// 時間の流れを普通に戻す
     /// </summary>
