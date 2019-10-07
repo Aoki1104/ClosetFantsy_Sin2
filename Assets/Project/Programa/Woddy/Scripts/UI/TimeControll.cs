@@ -5,7 +5,7 @@ using UnityEngine;
 public class TimeControll : MonoBehaviour
 {
     private int normal_speed = 1;
-    private int accle_speed = 4;
+    private int accle_speed =4;
     private bool time_accle = false;
     [SerializeField] private GameObject accel_particle;
 

@@ -1548,15 +1548,15 @@ namespace UniStorm
             {
                 CurrentTimeOfDay = CurrentTimeOfDayEnum.Morning;
             }
-            else if (Hour >= 8 && Hour <= 16)
+            else if (Hour >= 8 && Hour <= 12)
             {
                 CurrentTimeOfDay = CurrentTimeOfDayEnum.Day;
             }
-            else if (Hour >= 17 && Hour <= 18)
+            else if (Hour >= 15 && Hour <= 20)
             {
                 CurrentTimeOfDay = CurrentTimeOfDayEnum.Evening;
             }
-            else if (Hour >= 19 && Hour <= 23 || Hour >= 0 && Hour <= 5)
+            else if (Hour >= 21 && Hour <= 23 || Hour >= 0 && Hour <= 5)
             {
                 CurrentTimeOfDay = CurrentTimeOfDayEnum.Night;
             }

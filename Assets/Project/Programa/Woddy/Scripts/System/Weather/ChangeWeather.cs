@@ -4,36 +4,48 @@ using UnityEngine;
 
 public class ChangeWeather : MonoBehaviour
 {
+    private enum Weather {
+        Sunny = 0,
+        Rain = 1,
+        Snow= 2
+    }
 
-    public UniStorm.WeatherType[] weathertype;
+    public List<UniStorm.WeatherType> weathertype;
     public UniStorm.UniStormSystem unistrom;
-    private bool rainy = false;
+    [SerializeField] private SeasonManagement season_management;
+    private bool sunny = true;
+    private int weather_num = 0;
 
+    private void Start()
+    {
+        weathertype = unistrom.AllWeatherTypes;
+
+        foreach(UniStorm.WeatherType allweather in weathertype )
+        Debug.Log(allweather);
+    }
 
     public void Change()
     {
-        rainy = !rainy;
+        sunny = !sunny;
 
-        if (rainy)
-            Rain();
+        UpdateWeather(sunny);
+    }
+
+    private void UpdateWeather(bool _sunny)
+    {
+        if (_sunny != true)
+        {
+            if (season_management.now_season == SeasonManagement.Season.Winter)
+                weather_num = (int)Weather.Snow;
+            else
+                weather_num = (int)Weather.Rain;
+        }
         else
-            Sunny();
-    }
-
-
-    /// <summary>
-    /// 晴れ
-    /// </summary>
-    private void Sunny()
-    {
-        unistrom.CurrentWeatherType = weathertype[0];
-        unistrom.InitializeWeather(true);
-    }
-    
-
-    private void Rain()
-    {
-        unistrom.CurrentWeatherType = weathertype[1];
+        {
+            weather_num = (int)Weather.Sunny;
+        }
+        Debug.Log("weathertype" + weathertype.Count);
+        unistrom.CurrentWeatherType = weathertype[weather_num];
         unistrom.InitializeWeather(true);
     }
 }
