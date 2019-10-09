@@ -15,29 +15,28 @@ public class TimeZone : MonoBehaviour
         Evening,
         Night               //夜
     };
-    private time_zone _time_zone = time_zone.Daytime;
+    private time_zone now_time_zone = time_zone.Daytime;
+    private time_zone old_time_zone = time_zone.Daytime;
 
     private int now_minute;
     private int old_minute;
-    private float minute_forward_max_sec = 5.0f;  //夕方の間の時間を進める秒数
+    private int tmp_hour; 
+    private float minute_forward_max_sec = 2.0f;  //夕方の間の時間を進める秒数
     private float minute_forward_sec;
     public UniStorm.UniStormSystem unistrom;
     public Text time_zone_check;
 
     private void Start()
     {
-        now_minute = unistrom.Minute;
-        TimeZoneSet(unistrom.Hour, now_minute);
-        time_zone_check.text = _time_zone.ToString();
+        TimeUpdate();
     }
 
     void Update()
     {
-        if (_time_zone != time_zone.Evening)
-            TimeUpdate();
-        else
-            EveningSlow();
-        time_zone_check.text = _time_zone.ToString();
+        TimeUpdate();
+
+        if (old_time_zone != now_time_zone)
+            AdjustTimeVelocity();
     }
 
     private void TimeUpdate()
@@ -46,6 +45,8 @@ public class TimeZone : MonoBehaviour
 
         if (now_minute != old_minute)
             TimeZoneSet(unistrom.Hour, now_minute);
+
+        time_zone_check.text = now_time_zone.ToString();
     }
 
     /// <summary>
@@ -55,31 +56,26 @@ public class TimeZone : MonoBehaviour
     {
         old_minute = minute;
         if (hour >= 7 && hour < 17)
-            _time_zone = time_zone.Daytime;
-        else if (hour >= 17 || hour < 19)
-            _time_zone = time_zone.Evening;
+            now_time_zone = time_zone.Daytime;
+        else if (hour >= 17 && hour < 19)
+            now_time_zone = time_zone.Evening;
         else if(hour >= 19)
-            _time_zone = time_zone.Night;
+            now_time_zone = time_zone.Night;
         else if(hour >= 0 && hour < 7)
-            _time_zone = time_zone.Night;
+            now_time_zone = time_zone.Night;
     }
 
-
-
     /// <summary>
-    /// 夕方の間だけ時間の進め方を遅くする
+    /// 時間帯によって時間の進む速さを調整する
     /// </summary>
-    private void EveningSlow()
+    private void AdjustTimeVelocity()
     {
-            minute_forward_sec += Time.deltaTime;
-            unistrom.Minute = now_minute;
+        if (now_time_zone == time_zone.Evening)
+            unistrom.DayLength = 3;
+        else
+            unistrom.DayLength = 1;
 
-            if (minute_forward_sec > minute_forward_max_sec)
-            {
-                Debug.Log("Complete");
-                minute_forward_sec = 0;
-                TimeUpdate();
-            }
+        old_time_zone = now_time_zone;
     }
 
     /// <summary>
@@ -87,7 +83,7 @@ public class TimeZone : MonoBehaviour
     /// </summary>
     public string TimeZoneGet()
     {
-        return _time_zone.ToString();
+        return now_time_zone.ToString();
     }
 
 }

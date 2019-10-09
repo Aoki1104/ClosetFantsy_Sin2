@@ -7,7 +7,7 @@ public class TimeControll : MonoBehaviour
     private int normal_speed = 1;
     private int accle_speed =4;
     private bool time_accle = false;
-    [SerializeField] private GameObject accel_particle;
+    [SerializeField] private CRT accel_particle;
 
     public void TimeChange()
     {
@@ -32,7 +32,7 @@ public class TimeControll : MonoBehaviour
     private void TimeNormal()
     {
         Time.timeScale = normal_speed;
-        accel_particle.SetActive(false);
+        accel_particle.enabled = false;
     }
 
     /// <summary>
@@ -41,7 +41,7 @@ public class TimeControll : MonoBehaviour
     private void TimeAccel()
     {
         Time.timeScale = accle_speed;
-        accel_particle.SetActive(true);
+        accel_particle.enabled = true;
     }
     
 }
