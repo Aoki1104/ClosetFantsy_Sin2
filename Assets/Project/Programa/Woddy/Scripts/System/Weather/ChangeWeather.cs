@@ -44,8 +44,10 @@ public class ChangeWeather : MonoBehaviour
         {
             weather_num = (int)Weather.Sunny;
         }
-        Debug.Log("weathertype" + weathertype.Count);
-        unistrom.CurrentWeatherType = weathertype[weather_num];
-        unistrom.InitializeWeather(true);
+        Debug.Log("weathertype" + weathertype[weather_num]);
+        //unistrom.CurrentWeatherType = weathertype[weather_num];
+        //unistrom.InitializeWeather(true);
+        UniStorm.UniStormManager.Instance.ChangeWeatherWithTransition(weathertype[weather_num]);
+       //UniStorm.UniStormManager.Instance.ChangeWeatherInstantly(weathertype[weather_num]);
     }
 }

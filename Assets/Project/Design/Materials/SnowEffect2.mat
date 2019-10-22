@@ -1,0 +1,148 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SnowEffect2
+  m_Shader: {fileID: 4800000, guid: fbd99a259d900874aab3008c875d1dde, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailBump:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainBump:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Occlusion:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SnowLayerBump:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SnowLayerTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _AmbientBlendStrength: 0.7
+    - _BumpScale: 1
+    - _Cutoff: 0.5
+    - _DetailIntensity: 0
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 0
+    - _GlossMapScale: 1
+    - _Glossiness: 0.5
+    - _GlossyReflections: 1
+    - _InvFade: 1
+    - _MaskMoon: 0
+    - _Metallic: 0
+    - _MetallicSmoothness: 1
+    - _Mode: 0
+    - _OcclusionStrength: 1
+    - _Parallax: 0.02
+    - _Smoothness: 0.25
+    - _SmoothnessTextureChannel: 0
+    - _SnowSmoothness: 0.25
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _UVSec: 0
+    - _WetnessMultiplier: 0.5
+    - _ZWrite: 1
+    - _uAttenuation: 1
+    - _uCloudAlpha: 3.25
+    - _uCloudsBackwardScatteringG: -0.2
+    - _uCloudsBaseEdgeSoftness: 0.1
+    - _uCloudsBaseScale: 1.51
+    - _uCloudsBottom: 1350
+    - _uCloudsBottomSoftness: 0.25
+    - _uCloudsCoverage: 0.52
+    - _uCloudsCoverageBias: 0
+    - _uCloudsDensity: 0.03
+    - _uCloudsDetailScale: 20
+    - _uCloudsDetailStrength: 0.2
+    - _uCloudsForwardScatteringG: 0.8
+    - _uCloudsHeight: 2150
+    - _uCloudsMovementSpeed: 20
+    - _uCloudsTurbulenceSpeed: 50
+    - _uCurlScale: 20
+    - _uCurlStrength: 1
+    - _uHorizonColorFadeEnd: 0
+    - _uHorizonColorFadeStart: 0
+    - _uHorizonDarkness: 1
+    - _uHorizonFadeEnd: 0.25
+    - _uHorizonFadeStart: -0.1
+    - _uLightningContrast: 3
+    - _uMoonAttenuation: 1
+    m_Colors:
+    - _Color: {r: 1, g: 0, b: 0, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _MainTexColor: {r: 1, g: 1, b: 1, a: 1}
+    - _SnowDirection: {r: 0, g: 1, b: 0, a: 1}
+    - _SnowLayerColor: {r: 1, g: 1, b: 1, a: 1}
+    - _TintColor: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
+    - _uCloudsAmbientColorBottom: {r: 0.22939995, g: 0.39409998, b: 0.5116999, a: 0}
+    - _uCloudsAmbientColorTop: {r: 0.87674, g: 0.98234993, b: 1.1764, a: 0}
+    - _uCloudsColor: {r: 1, g: 1, b: 1, a: 1}
+    - _uFogColor: {r: 1, g: 1, b: 1, a: 1}
+    - _uHorizonColor: {r: 1, g: 1, b: 1, a: 1}
+    - _uLightningColor: {r: 1, g: 1, b: 1, a: 1}
+    - _uMoonColor: {r: 1.4, g: 1.26, b: 1.19, a: 0}
+    - _uMoonDir: {r: 0, g: 1, b: 0, a: 0}
+    - _uSunColor: {r: 1.4, g: 1.26, b: 1.19, a: 0}
+    - _uSunDir: {r: 0, g: 1, b: 0, a: 0}
