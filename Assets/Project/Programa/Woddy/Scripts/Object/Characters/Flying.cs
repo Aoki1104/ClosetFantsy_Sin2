@@ -8,18 +8,20 @@ using UnityEngine;
 public class Flying : MonoBehaviour,iWalk
 {
     private Vector3 character_position;
-    private float max_position = 10;
-    private float min_position = -10;
+    private float max_move_amount = 10;
+    private float min_move_amount = -10;
 
     private Vector3 ground_position;
-    private float max_y;
-    private float min_y;
+    private Vector3 display_range_max;
+    private Vector3 display_range_min;
 
     private void Start()
     {
         ground_position = GameObject.FindGameObjectWithTag("Ground").transform.position;
-        max_y = ground_position.y +this.transform.position.y+ max_position;
-        min_y = ground_position.y + Mathf.Abs(this.transform.position.y);
+        Camera camera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+        display_range_max = new Vector3(85,103,-46);
+        display_range_min = new Vector3(67,0,-81);
+        display_range_min.y = ground_position.y + max_move_amount;
     }
 
     public void GetCharaPosition(Vector3 chara_position)
@@ -29,9 +31,9 @@ public class Flying : MonoBehaviour,iWalk
 
     public Vector3 SetDestination()
     {
-        character_position.x += Random.Range(min_position, max_position);
-        character_position.z += Random.Range(min_position, max_position);
-        character_position.y = Random.Range(min_y, max_y);
+        character_position.x = Random.Range(display_range_min.x, display_range_max.x);
+        character_position.z = Random.Range(display_range_min.z, display_range_max.z);
+       character_position.y = Random.Range(display_range_min.y, display_range_max.y);
 
         return character_position;
     }

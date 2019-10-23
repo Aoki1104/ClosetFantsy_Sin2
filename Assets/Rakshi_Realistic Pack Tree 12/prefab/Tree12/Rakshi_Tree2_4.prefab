@@ -96,7 +96,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Optimized Bark Material
-  m_Shader: {fileID: 4800000, guid: d376b941cba3a514cbf15dcce621560a, type: 3}
+  m_Shader: {fileID: 10604, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
   m_EnableInstancingVariants: 0
@@ -147,7 +147,7 @@ Material:
     - _SquashAmount: 1
     - _WetnessMultiplier: 0.5
     m_Colors:
-    - _Color: {r: 0.9528302, g: 0.7236116, b: 0.7236116, a: 1}
+    - _Color: {r: 0.9622642, g: 0.6309185, b: 0.6309185, a: 1}
     - _MainTexColor: {r: 1, g: 1, b: 1, a: 1}
     - _SnowDirection: {r: 0, g: 1, b: 0, a: 1}
     - _SnowLayerColor: {r: 1, g: 1, b: 1, a: 1}
@@ -386,7 +386,7 @@ MonoBehaviour:
   m_Name: Tree Data
   m_EditorClassIdentifier: 
   _uniqueID: 19956
-  materialHash: f00a95edd5ea03de6a35fb6962c26a79-550813696
+  materialHash: e84b87a7c93e96db75acd43ce3e299f7-550813696
   root:
     _uniqueID: 1
     seed: 1230
