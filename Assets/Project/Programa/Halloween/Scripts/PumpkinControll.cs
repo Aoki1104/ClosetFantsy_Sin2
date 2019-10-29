@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.Collections;
+
 
 public class PumpkinControll : MonoBehaviour
 {
@@ -10,7 +10,7 @@ public class PumpkinControll : MonoBehaviour
     [SerializeField]
     private float waittime = 5.0f;
     [SerializeField]
-    private Gameobject pumpkin_light;
+    private GameObject pumpkin_light;
 
     private bool now_state = false;
     private bool old_state = false;
