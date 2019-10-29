@@ -23,6 +23,7 @@ public class SeasonManagement : MonoBehaviour
     [SerializeField]private Text month;
     [SerializeField]private Text day;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,7 +39,7 @@ public class SeasonManagement : MonoBehaviour
     }
 
     /// <summary>
-    /// 現在の季節の初めの月に戻す
+    /// 現在の季節の初めの月に設定する
     /// </summary>
     private void RevertMonth()
     {

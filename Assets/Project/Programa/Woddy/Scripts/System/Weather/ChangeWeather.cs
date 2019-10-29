@@ -10,9 +10,9 @@ public class ChangeWeather : MonoBehaviour
         Snow= 2
     }
 
+    [SerializeField] private Weather weather;
     public List<UniStorm.WeatherType> weathertype;
     public UniStorm.UniStormSystem unistrom;
-    [SerializeField] private SeasonManagement season_management;
     private bool sunny = true;
     private int weather_num = 0;
 
@@ -25,29 +25,14 @@ public class ChangeWeather : MonoBehaviour
     }
 
     public void Change()
-    {
-        sunny = !sunny;
-
-        UpdateWeather(sunny);
+    { 
+        UpdateWeather();
     }
 
-    private void UpdateWeather(bool _sunny)
+    private void UpdateWeather()
     {
-        if (_sunny != true)
-        {
-            if (season_management.now_season == SeasonManagement.Season.Winter)
-                weather_num = (int)Weather.Snow;
-            else
-                weather_num = (int)Weather.Rain;
-        }
-        else
-        {
-            weather_num = (int)Weather.Sunny;
-        }
-        Debug.Log("weathertype" + weathertype[weather_num]);
-        //unistrom.CurrentWeatherType = weathertype[weather_num];
-        //unistrom.InitializeWeather(true);
+        weather_num = (int)weather;
+ 
         UniStorm.UniStormManager.Instance.ChangeWeatherWithTransition(weathertype[weather_num]);
-       //UniStorm.UniStormManager.Instance.ChangeWeatherInstantly(weathertype[weather_num]);
     }
 }
