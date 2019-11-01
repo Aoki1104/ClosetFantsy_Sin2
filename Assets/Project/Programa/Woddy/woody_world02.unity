@@ -4898,7 +4898,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9d4d9c9097534454fa1e23751baf5e4d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 79ef80af5986db7408e3751b19528bdf, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -12678,7 +12678,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 19802152, guid: f1de9968472fbb54bac54676ee1e917d, type: 3}
       propertyPath: startDelay.scalar
-      value: 20
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 19802152, guid: f1de9968472fbb54bac54676ee1e917d, type: 3}
       propertyPath: playOnAwake
@@ -21224,7 +21224,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -34, y: -109}
+  m_AnchoredPosition: {x: -34, y: -127}
   m_SizeDelta: {x: 228, y: 232}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1232902401
