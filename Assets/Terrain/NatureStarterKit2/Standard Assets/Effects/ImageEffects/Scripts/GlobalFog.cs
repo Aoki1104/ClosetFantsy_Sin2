@@ -6,9 +6,9 @@ namespace UnityStandardAssets.ImageEffects
     [ExecuteInEditMode]
     [RequireComponent (typeof(Camera))]
     [AddComponentMenu ("Image Effects/Rendering/Global Fog")]
-    class GlobalFog : PostEffectsBase
+    public class GlobalFog : PostEffectsBase
 	{
-		[Tooltip("Apply distance-based fog?")]
+        [Tooltip("Apply distance-based fog?")]
         public bool  distanceFog = true;
 		[Tooltip("Exclude far plane pixels from distance-based fog? (Skybox or clear color)")]
 		public bool  excludeFarPixels = true;
@@ -26,6 +26,27 @@ namespace UnityStandardAssets.ImageEffects
         public Shader fogShader = null;
         private Material fogMaterial = null;
 
+        //DistanceChange
+        void Update()
+        {
+            if (fog == true)
+            {
+                //startDistance += Time.deltaTime*5;
+                if (startDistance < 50) { startDistance += Time.deltaTime * 8; }
+
+            }
+            else {
+                if (startDistance >1) { startDistance -= Time.deltaTime * 8; }
+            }
+        }
+
+        bool fog = false;
+
+        public void Add1TostartDistance()
+        {
+            fog = !fog;
+            
+        }
 
         public override bool CheckResources ()
 		{
