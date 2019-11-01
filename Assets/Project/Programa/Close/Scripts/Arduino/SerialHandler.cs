@@ -20,7 +20,7 @@ public class SerialHandler : MonoBehaviour
 
     void Awake()
     {
-        portName = "COM"+PlayerPrefs.GetInt("COM");
+      //  portName = "COM"+PlayerPrefs.GetInt("COM");
         Debug.Log("port:" + portName);
         Open();
     }
