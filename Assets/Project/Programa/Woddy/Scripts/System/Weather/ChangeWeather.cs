@@ -11,28 +11,18 @@ public class ChangeWeather : MonoBehaviour
     }
 
     [SerializeField] private Weather weather;
-    public List<UniStorm.WeatherType> weathertype;
-    public UniStorm.UniStormSystem unistrom;
-    private bool sunny = true;
-    private int weather_num = 0;
+    private WeatherManager weather_manager;
 
     private void Start()
     {
-        weathertype = unistrom.AllWeatherTypes;
-
-        foreach(UniStorm.WeatherType allweather in weathertype )
-        Debug.Log(allweather);
+        weather_manager = GameObject.Find("WeatherManager").GetComponent<WeatherManager>();
     }
 
     public void Change()
-    { 
-        UpdateWeather();
+    {
+        weather_manager.UpdateWeather((int)weather);
     }
 
-    private void UpdateWeather()
-    {
-        weather_num = (int)weather;
- 
-        UniStorm.UniStormManager.Instance.ChangeWeatherWithTransition(weathertype[weather_num]);
-    }
+    
+
 }

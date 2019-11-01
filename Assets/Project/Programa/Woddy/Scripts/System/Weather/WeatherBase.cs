@@ -54,12 +54,13 @@ public class WeatherBase : StatefulObjectBase<WeatherBase,weather>
 public class WeatherBase :MonoBehaviour
 {
     public Text weather_text;
-
+    [SerializeField] private GameObject water_fall;
 
      public enum weather 
     {
         sun=0,
-        rain
+        rain,
+        snow
     }
 
     weather _weather;
@@ -73,6 +74,11 @@ public class WeatherBase :MonoBehaviour
             _weather = weather.rain;
     }
 
+    //雨のときの初期化
+    private void RainInitialize()
+    {
+        water_fall.SetActive(true);
+    }
 
     public string GetWeather()
     {

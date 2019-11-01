@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ReadEncoderNumber : MonoBehaviour
 {
-    private int encoder_num = 0;
+    private int world_num = 0;
 
     private SerialHandler serialHandler;
     private WorldChanger world_changer;
@@ -26,8 +26,8 @@ public class ReadEncoderNumber : MonoBehaviour
     {
         try
         {
-            encoder_num = int.Parse(message);
-            world_changer.CheckEncoderPosition(encoder_num);
+            world_num = int.Parse(message);
+            world_changer.SerialGetWorldNumber(world_num);
         }
         catch (System.Exception e)
         {
