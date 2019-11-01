@@ -8,36 +8,49 @@ using UnityEngine.UI;
 /// </summary>
 public class TimeZone : MonoBehaviour 
     {
-    private float sun_rotate;
-
+    
     //時間帯を保管している列挙型
     public enum time_zone {
         Daytime = 0,        //朝・昼
         Night               //夜
     };
+    private time_zone _time_zone = time_zone.Daytime;
 
-    public time_zone _time_zone = time_zone.Daytime;
-    public GameObject sun;     //太陽を保管する変数
+    private int now_minute;
+    private int old_minute;
+    public UniStorm.UniStormSystem unistrom;
+    public Text time_zone_check;
 
-
-    //デバッグ用変数
-   // public Text timezone;
+    private void Start()
+    {
+        now_minute = unistrom.Minute;
+        TimeZoneSet(unistrom.Hour, now_minute);
+        time_zone_check.text = _time_zone.ToString();
+    }
 
     void Update()
     {
-        sun_rotate = sun.transform.eulerAngles.x;
-       // Debug.Log("sunrotate:" + sun_rotate);
-        //太陽の角度が0より上ならば昼　そうでなければ夜
-        if(sun_rotate  >= 0 && sun_rotate <= 80)
-        {
+        now_minute = unistrom.Minute;
+
+        if (now_minute != old_minute)
+            TimeZoneSet(unistrom.Hour,now_minute);
+
+        time_zone_check.text = _time_zone.ToString();
+    }
+
+    /// <summary>
+    /// 時間帯を設定する
+    /// </summary>
+    private void TimeZoneSet(int hour,int minute)
+    {
+        old_minute = minute;
+
+        if (hour >= 7 && hour < 18)
             _time_zone = time_zone.Daytime;
-        }
-        else if(sun_rotate >=270 )
-        {
+        else if (hour >= 18)
             _time_zone = time_zone.Night;
-        }
-       // Debug.Log("sun:" + sun_rotate);
-      //  timezone.text = _time_zone.ToString();
+        else if(hour >= 0 && hour < 7)
+            _time_zone = time_zone.Night;
     }
 
     /// <summary>

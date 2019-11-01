@@ -17,7 +17,7 @@ namespace UnityStandardAssets.ImageEffects
         void Update()
         {
             float startfog = script.startDistance;
-            Debug.Log("StartDistanceは" + startfog);
+         //   Debug.Log("StartDistanceは" + startfog);
 
         }
         public void OnClick()
